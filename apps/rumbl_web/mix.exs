@@ -46,6 +46,7 @@ defmodule RumblWeb.MixProject do
       {:esbuild, "~> 0.8", runtime: Mix.env() == :dev},
       {:tailwind, "~> 0.2.0", runtime: Mix.env() == :dev},
       {:rumbl, in_umbrella: true},
+      {:info_sys, in_umbrella: true},
       {:swoosh, "~> 1.3"},
       {:finch, "~> 0.13"},
       {:telemetry_metrics, "~> 0.6"},
