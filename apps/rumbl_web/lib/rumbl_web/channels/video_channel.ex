@@ -3,7 +3,6 @@ defmodule RumblWeb.VideoChannel do
   use RumblWeb, :channel
 
   @impl true
-
   def join("videos:" <> video_id, payload, socket) do
     send(self(), :after_join)
     last_seen_id = payload["last_seen_id"] || 0

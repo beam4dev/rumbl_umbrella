@@ -21,9 +21,11 @@ defmodule InfoSys.Wolfram do
     [%Result{backend: __MODULE__, score: 95, text: to_string(answer)}]
   end
 
+  @http Application.compile_env(:info_sys, :wolfram)[:http_client] || Req
   defp fetch_answers(query) do
-    req = Req.new(base_url: @base)
-    Req.get!(req, url: "", params: [appid: id(), i: query]).body
+    # req = @http.new(base_url: @base)
+    @http.get!(@base, params: [appid: id(), i: query]).body
+    # @http.get!(req, url: "", params: [appid: id(), i: query]).body
   end
 
   defp id, do: Application.fetch_env!(:info_sys, :wolfram)[:app_id]

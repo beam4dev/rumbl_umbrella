@@ -1,7 +1,7 @@
-<div class="container mx-auto p-4">
-    <div class="flex flex-full -mx-3">
+<div class="container mx-auto px-4">
+    <div class="flex flex-row">
         <!-- Users Section -->
-        <div class="w-1/4 px-3">
+        <div class="w-1/6 px-3">
             <div class="bg-white p-4 shadow rounded h-full">
                 <h3 class="text-lg font-bold mb-4">Users</h3>
                 <ul id="user-list">
@@ -11,20 +11,20 @@
         </div>
 
         <!-- Video Player Section -->
-        <div class="w-3/5 px-3">
+        <div class="w-1/2 px-3 flex-col" >
             <h2 class="text-xl font-bold mt-2">
                 <%= @video.title %>
             </h2>
             <div class="bg-white h-full">
                 <!-- Replace with actual video player -->
-                <div id="video" data-id={@video.id} data-player-id={player_id(@video)}>
+                <div class="aspect-w-1 aspect-h-1" id="video" data-id={@video.id} data-player-id={player_id(@video)}>
                     <!-- Your content here, if any -->
                 </div>
             </div>
         </div>
 
         <!-- Annotations Section -->
-        <div class="w-2/5 px-3">
+        <div class="w-1/4 px-3">
             <div class="bg-white p-4 shadow rounded h-full flex flex-col">
                 <h3 class="text-lg font-bold mb-4">Annotations</h3>
                 <div id="msg-container">
@@ -42,3 +42,4 @@
         </div>
     </div>
 </div>
+

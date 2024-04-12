@@ -25,7 +25,7 @@ defmodule RumblWeb.ChannelCase do
 
       # The default endpoint for testing
       @endpoint RumblWeb.Endpoint
-    end
+     end
   end
 
   setup tags do
