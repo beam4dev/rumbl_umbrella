@@ -6,4 +6,4 @@ Rumbl application from the Phoenix Book updated to use the latest version of Pho
 Demo app
 
 
-![](demo_app.gif.gif)
+![](./demo_app.gif)
